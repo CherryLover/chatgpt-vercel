@@ -118,10 +118,7 @@ export const post: APIRoute = async context => {
     }, 0)
 
     if (tokens > maxInputTokens[model]) {
-      if (messages.length > 1)
-        throw new Error(
-          `由于开启了连续对话选项，导致本次对话过长，请清除部分内容后重试，或者关闭连续对话选项。`
-        )
+      if (messages.length > 1) throw new Error(`太长了，缩短一点吧。`)
       else throw new Error("太长了，缩短一点吧。")
     }
 

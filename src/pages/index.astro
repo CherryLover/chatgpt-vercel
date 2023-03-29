@@ -41,8 +41,7 @@ const question = Astro.url.searchParams.get("q")
     <Chat
       env={{
         setting,
-        message,
-        resetContinuousDialogue
+        message
       }}
       question={question ?? undefined}
       prompts={prompts}

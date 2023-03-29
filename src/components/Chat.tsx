@@ -391,12 +391,12 @@ export default function (props: {
               !loading() && !compatiblePrompt().length && height() === "48px"
             }
           >
-            <SettingAction
+            {/* <SettingAction
               setting={setting}
               setSetting={setSetting}
               clear={clearSession}
               messaages={messageList()}
-            />
+            /> */}
           </Show>
           <Show
             when={!loading()}
